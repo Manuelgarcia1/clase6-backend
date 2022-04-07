@@ -1,0 +1,29 @@
+{
+    "name": "challenge-server-express",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "repository": {
+        "url": "https://glitch.com/edit/#!/hello-express"
+    },
+    "author": "Lucas Koval",
+    "license": "MIT",
+    "keywords": [
+        "node",
+        "glitch",
+        "express"
+    ],
+    "bugs": {
+        "url": "https://github.com/LucasKoval/CH-Server-Express/issues"
+    },
+    "homepage": "https://github.com/LucasKoval/CH-Server-Express#readme",
+    "dependencies": {
+        "express": "^4.17.3"
+    },
+    "engines": {
+        "node": "16.x"
+    }
+}

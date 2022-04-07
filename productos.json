@@ -1,0 +1,24 @@
+[
+  {
+      "id": 1,
+      "name": "Zapatillas 1",
+      "header_image": "https://cdn.akamai.steamstatic.com/steam/apps/1151640/header.jpg?t=1635442187",
+      "Price": 21000
+  },
+
+
+  {   "id": 2,
+      "name": "Zapatillas 2",
+      "header_image": "https://cdn.akamai.steamstatic.com/steam/apps/1446780/header.jpg?t=1642465111",
+      "Price": 3199
+  },
+
+
+  {   
+      "id": 3,
+      "name": "Zapatillas 3",
+      "header_image": "https://cdn.akamai.steamstatic.com/steam/apps/534380/header.jpg?t=1642668242",
+      "Price": 4123
+
+  }
+]
