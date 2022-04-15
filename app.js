@@ -1,29 +1,21 @@
+//----------* REQUIRE'S *----------//
 const express = require('express')
-const Container = require('./fileManagement')
-
+const path = require('path')
 const app = express()
-const database = new Container('productos')
 
-// Home
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html')
-})
+app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
-// All Products
-app.get('/productos', async (req, res) => {
-  const allProducts = await database.getAll()
-  res.send(allProducts)
-})
+//----------* ROUTES REQUIRE *----------//
+const mainRouter = require('./src/routes/main')
+const productsRouter = require('./src/routes/products')
 
-// Random Product
-app.get('/productoRandom', async (req, res) => {
-  const allProducts = await database.getAll()
-  const randomIndex = Math.floor(Math.random() * allProducts.length)
-  const randomProduct = allProducts[randomIndex]
-  res.send(randomProduct)
-})
+//----------* ROUTES USE() *----------//
+app.use('/', mainRouter)
+app.use('/api/productos', productsRouter)
 
-// Server configuration
+//----------* SERVER CONFIGURATION *----------//
 const PORT = 8080
 const server = app.listen(PORT, () => {
   console.log(`Server running on: http://localhost:${server.address().port}/`)
